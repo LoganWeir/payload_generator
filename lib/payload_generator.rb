@@ -7,8 +7,6 @@ require 'trollop'
 require 'rgeo/geo_json'
 require 'rgeo'
 require 'bounding_box_testing'
-# For printing hashes...
-require 'pry'
 
 
 # # Set options outside of ARGV
