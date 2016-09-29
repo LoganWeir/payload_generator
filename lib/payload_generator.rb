@@ -13,10 +13,6 @@ require 'bounding_box_testing'
 
 # # Set options outside of ARGV
 opts = Trollop::options do
-  # opt :output_name, "Output Name", default: nil, 
-  # 	short: 'o', type: String
-  # opt :layer_name, "Layer Name", default: nil, short: 'n', type: String
-  # opt :layer_id, "Layer ID", default: nil, short: 'i', type: Integer
   opt :payload_testing, "Payload Testing", 
   	default: nil, short: 'p', type: String
 end
@@ -102,5 +98,7 @@ end
 
 
 payload_output.write(ready_bboxes.to_json) unless payload_output.nil?
+
+payload_output.close unless payload_output.nil?
 
 puts "\a"
